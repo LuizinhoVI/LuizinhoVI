@@ -1,3 +1,3 @@
-### Hi there 👋
+### Sejam bem vindos👋
 
-![LUIZ CODE GitHub stats](https://github-readme-stats.vercel.app/api?username=LuizinhoVI&show_icons=true&theme=radical)
+![LUIZ CODE ](https://github-readme-stats.vercel.app/api?username=LuizinhoVI&show_icons=true&theme=radical)
