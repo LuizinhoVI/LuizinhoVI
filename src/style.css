@@ -214,7 +214,7 @@ h3 {
   .game-section .item {
     margin: 0 12px 60px;
     width: 200px;
-    height: 90vh!important;
+    height: 90vh;
     border: solid red 1px;
   }
   .game-section .item.active {
@@ -258,7 +258,8 @@ height: 200px;
   .game-section .item {
     margin: 0 10px 40px;
     width: 250px;
-    height: 450px;
+    height: 80vh;
+    /* border: solid red 1px; */
   }
   .game-section .item.active {
     width: 300px;
