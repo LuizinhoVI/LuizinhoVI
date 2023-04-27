@@ -89,11 +89,12 @@ h3 {
   margin: 15px 0;
   display: flex;
   display: -webkit-flex;
+
 }
 .game-section .item {
   margin: 0 15px 60px;
   width: 320px;
-  height: 400px;
+  height: 70vh;
   display: flex;
   display: -webkit-flex;
   align-items: flex-end;
@@ -108,7 +109,7 @@ h3 {
 }
 
 .game-section .item.active {
-  width: 500px;
+  width: 600px;
   box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
 }
