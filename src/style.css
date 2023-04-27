@@ -41,6 +41,14 @@ a:hover {
 a:hover {
   color: #e73700;
 }
+
+.video{
+  position: relative;
+left:5px;
+width: 500px;
+height: 320px;
+
+}
 h2 {
   margin-bottom: 48px;
   padding-bottom: 16px;
@@ -109,7 +117,7 @@ h3 {
 }
 
 .game-section .item.active {
-  width: 600px;
+  width: 550px;
   box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
 }
