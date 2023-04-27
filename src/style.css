@@ -46,8 +46,7 @@ a:hover {
   position: relative;
 left:5px;
 width: 500px;
-height: 320px;
-
+height: 330px;
 }
 h2 {
   margin-bottom: 48px;
@@ -111,8 +110,8 @@ h3 {
   border-radius: 16px;
   overflow: hidden;
   position: relative;
-  transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
 
@@ -139,8 +138,8 @@ h3 {
   overflow: hidden;
   transform: translateY(calc(100% - 54px));
   -webkit-transform: translateY(calc(100% - 54px));
-  transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
 }
 .game-section .item.active .item-desc {
   transform: none;
@@ -150,8 +149,8 @@ h3 {
   opacity: 0;
   -webkit-transform: translateY(32px);
   transform: translateY(32px);
-  transition: all 0.4s ease-in-out 0.2s;
-  -webkit-transition: all 0.4s ease-in-out 0.2s;
+  transition: all 0.5s ease-in-out 0.1s;
+  -webkit-transition: all 0.5s ease-in-out 0.1s;
 }
 .game-section .item.active .item-desc p {
   opacity: 1;
