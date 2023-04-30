@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .form-container {
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 100px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            outline: none;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .message {
+            margin-top: 10px;
+            text-align: center;
+            color: red;
+        }
+
+        button {
+            position: relative;
+            width: 90px !important;
+        }
+
+        .esquerda {
+            display: none;
+            left: 0px;
+        }
+
+        .centro {
+            left: 100px;
+            display: block;
+        }
+
+        .direita {
+            display: none;
+            left: 200px;
+        }
+
+        .entrar {
+            position: relative;
+            background-color: green;
+            left: 100px;
+            display: block;
+        }
+    </style>
+    <title>Login animado</title>
+
+</head>
+
+<body>
+    <div class="form-container">
+        <h2 align="center">Login</h2>
+        <input type="text" id="username" onkeyup="verificarLogin()" placeholder="usuário">
+        <input type="password" id="password" onkeyup="verificarLogin()" placeholder="Senha">
+        <button id="esquerda" class="esquerda">Entrar</button>
+        <button id="centro" class="centro">Entrar</button>
+        <button id="direita" class="direita">Entrar</button>
+        <p class="message" id="loginMessage"></p>
+    </div>
+</body>
+<script>
+    var i = 1;
+    function verificarLogin() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var esquerda = document.querySelector(".esquerda");
+        var centro = document.querySelector(".centro");
+        var direita = document.querySelector(".direita");
+        var loginMessage = document.getElementById("loginMessage");
+
+        function esquerda_a() {
+            esquerda.style.display = "none";
+            centro.style.display = "block";
+
+            if (i == 1) {
+                esquerda.removeEventListener("mousemove", esquerda_a)
+                esquerda.style.display = "none";
+                direita.style.display = "none";
+                centro.style.display = "block";
+            }
+        }
+        function centro_o() {
+            centro.style.display = "none";
+            direita.style.display = "block";
+            if (i == 1) {
+                centro.removeEventListener("mousemove", centro_o)
+                esquerda.style.display = "none";
+                direita.style.display = "none";
+                centro.style.display = "block";
+            }
+        }
+        function direita_a() {
+            direita.style.display = "none";
+            esquerda.style.display = "block";
+            if (i == 1) {
+                direita.removeEventListener("mousemove", direita_a)
+                esquerda.style.display = "none";
+                direita.style.display = "none";
+                centro.style.display = "block";
+            }
+        }
+        // Verificar se o nome de usuário e senha estão corretos
+        if (username === "usuario" && password === "senha") {
+            loginMessage.textContent = "Login bem-sucedido!";
+            loginMessage.style.color = "green";
+            centro.textContent = "Entrar"
+            centro.style.background = "green";
+            console.log("passou " + i)
+            esquerda.style.display = "none";
+            direita.style.display = "none";
+            centro.style.display = "block";
+            i = +1;
+        } else {
+            loginMessage.textContent = "Nome de usuário ou senha incorretos.";
+            loginMessage.style.color = "red";
+            esquerda.style.background = "red"
+            centro.style.background = "red"
+            direita.style.background = "red"
+            esquerda.textContent = "Erro"
+            centro.textContent = "Erro"
+            direita.textContent = "Erro"
+            esquerda.addEventListener("mousemove", esquerda_a)
+            centro.addEventListener("mousemove", centro_o)
+            direita.addEventListener("mousemove", direita_a)
+            i = - 1;
+            console.log("passou" + i)
+        }
+    }
+
+
+</script>
+
+</html>

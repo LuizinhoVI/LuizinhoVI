@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exemplo de Geolocalização</title>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exemplo de Geolocalização</h1>
+    <p>Clique no botão abaixo para obter a sua localização atual:</p>
+    <button onclick="obterLocalizacao()">Obter Localização</button>
+    <div id="map"></div>
+
+    <script>
+        function obterLocalizacao() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function (position) {
+                        var latitude = position.coords.latitude;
+                        var longitude = position.coords.longitude;
+                        exibirMapa(latitude, longitude);
+                    },
+                    function (error) {
+                        console.error("Erro ao obter a localização:", error);
+                    }
+                );
+            } else {
+                console.error("Geolocalização não é suportada pelo seu navegador.");
+            }
+        }
+
+        function exibirMapa(latitude, longitude) {
+            var mapContainer = document.getElementById("map");
+            var mapUrl = "https://www.openstreetmap.org/#map=17/" + latitude + "/" + longitude;
+            mapContainer.innerHTML = "<iframe src='" + mapUrl + "' frameborder='0' style='border:0; height:100%; width:100%;'></iframe>";
+        }
+    </script>
+</body>
+
+</html>
