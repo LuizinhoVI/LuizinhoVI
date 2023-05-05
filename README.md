@@ -1,8 +1,6 @@
 ### <div align="left"> ************ Sejam bem vindos 👋 ************ </div> 
 
-![LUIZ CODE ](https://github-readme-stats.vercel.app/api?username=LuizinhoVI&show_icons=true&theme=radical)
 
-### <div align="left"> ************ <3  ************ </div> 
   <img align="left"  height="40" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
   <img align="left"height="40" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg">
   <img align="left"  height="40" width="40" src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png">
